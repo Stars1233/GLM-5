@@ -575,8 +575,8 @@ MODEL_PATH=/export/home/models/GLM-5-w8a8/
 DRAFT_MODEL_PATH=/export/home/models/GLM-5-MTP/
 # MTP weights exported from GLM-5 (see tutorial below)
 
-MASTER_NODE_ADDR="11.87.49.110:10015"
-LOCAL_HOST="11.87.49.110"
+master_port_ADDR="$master_ip:$master_port"
+LOCAL_HOST="$local_ip"
 # Service Port
 START_PORT=18994
 START_DEVICE=0
@@ -651,8 +651,8 @@ done
 **++node 0++**
 
 ```
-MASTER_NODE_ADDR="11.87.49.110:19990"
-LOCAL_HOST="11.87.49.110"
+MASTER_NODE_ADDR="$master_ip:$master_port"
+LOCAL_HOST="$local_ip"
 START_PORT=15890
 START_DEVICE=0
 LOG_DIR="logs"
@@ -973,7 +973,7 @@ export ATB_CONTEXT_WORKSPACE_SIZE=0
 
 MODEL_PATH="/export/home/models/GLM-5-final-w8a8/"
 DRAFT_MODEL_PATH="/export/home/models/GLM-5-final-w8a8-MTP/"
-MASTER_NODE_ADDR="$master_ip:$master_node" # 主节点ip， 主节点node
+MASTER_NODE_ADDR="$master_ip:$master_port" # 主节点ip， 主节点node
 START_PORT=48000
 START_DEVICE=0
 LOG_DIR="log"
@@ -1059,7 +1059,7 @@ export ATB_CONTEXT_WORKSPACE_SIZE=0
 
 MODEL_PATH="/export/home/models/GLM-5-final-w8a8/"
 DRAFT_MODEL_PATH="/export/home/models/GLM-5-final-w8a8-MTP/"
-MASTER_NODE_ADDR="$master_ip:$master_node" # 主节点ip， 主节点node
+MASTER_NODE_ADDR="$master_ip:$master_port" # 主节点ip， 主节点node
 START_PORT=48000
 START_DEVICE=0
 LOG_DIR="log"
